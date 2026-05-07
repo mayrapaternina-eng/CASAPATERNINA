@@ -1,0 +1,533 @@
+/* ================= RESET ================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ================= BODY ================= */
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #f4f6f9;
+    color: #1b263b;
+}
+
+/* ================= HEADER ================= */
+.header {
+    background: #0d1b2a;
+    text-align: center;
+    padding: 35px 20px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+}
+
+.logo-header {
+    max-width: 700px;
+}
+
+/* ================= HERO ================= */
+.hero {
+    position: relative;
+    height: 85vh;
+    background: url("img/proyecto3.jpeg") center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.6), rgba(0,0,0,0.7));
+}
+
+.hero-content {
+    position: relative;
+    text-align: center;
+    color: white;
+    max-width: 900px; /* 🔥 más espacio para que quepa la frase */
+    width: 100%;
+    padding: 40px;
+    margin: 0 auto;
+
+    display: flex;              /* 🔥 centra perfecto */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    animation: fadeUp 1s ease forwards;
+}
+
+.hero-content h2 {
+    font-family: Georgia, serif;
+    font-size: 42px;
+    margin-bottom: 15px;
+    white-space: nowrap; /* 🔥 mantiene todo en una sola línea */
+    text-align: center;
+}
+
+.hero-content p {
+    font-size: 18px;
+    margin-bottom: 25px;
+    line-height: 1.6;
+}
+
+/* ================= BOTÓN ================= */
+.btn {
+    display: inline-block;
+    padding: 14px 32px;
+    background: linear-gradient(135deg, #1b263b, #415a77);
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    background: linear-gradient(135deg, #415a77, #1b263b);
+}
+
+/* ================= SERVICIOS (INDEX) ================= */
+.servicios {
+    padding: 70px 20px;
+    text-align: center;
+}
+
+.servicios h2 {
+    font-family: Georgia, serif;
+    font-size: 32px;
+    margin-bottom: 40px;
+    color: #0d1b2a;
+}
+
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    justify-content: center;
+}
+
+.card {
+    background: #ffffff;
+    padding: 30px;
+    width: 260px;
+    border-radius: 14px;
+    font-size: 18px;
+    font-weight: 500;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    transition: all 0.35s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 4px;
+    width: 100%;
+    background: linear-gradient(90deg, #1b263b, #415a77);
+}
+
+.card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at top, rgba(65,90,119,0.15), transparent 70%);
+    opacity: 0;
+    transition: 0.4s;
+}
+
+.card:hover::after {
+    opacity: 1;
+}
+
+.card:hover {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 25px 60px rgba(0,0,0,0.18);
+    cursor: pointer;
+}
+
+.grid a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* ================= NUEVO: PLANTILLA PARA PÁGINAS INTERNAS ================= */
+/* Usa estas clases en TODAS tus páginas: mantenimiento, energia, etc */
+
+.page-hero {
+    position: relative;
+    height: 55vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url("img/proyecto2.jpeg") center/cover no-repeat;
+}
+
+.page-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.65);
+}
+
+.page-hero-content {
+    position: relative;
+    color: white;
+    text-align: center;
+    max-width: 800px;
+    padding: 20px;
+}
+
+.page-hero-content h1 {
+    font-size: 42px;
+    font-family: Georgia, serif;
+    margin-bottom: 10px;
+}
+
+.page-hero-content p {
+    font-size: 18px;
+    opacity: 0.9;
+}
+
+/* CONTENIDO */
+.page-content {
+    padding: 70px 8%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.page-content h2 {
+    font-family: Georgia, serif;
+    margin-bottom: 20px;
+    color: #0d1b2a;
+}
+
+.page-content p {
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+/* BLOQUES */
+.page-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.page-box {
+    background: #fff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    transition: 0.3s;
+}
+
+.page-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+}
+
+/* IMAGEN DESTACADA */
+.page-img {
+    width: 100%;
+    border-radius: 12px;
+    margin-top: 30px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+}
+
+/* ================= EXPERIENCIA ================= */
+.experiencia{
+    padding:80px 5%;
+    background:#020617;
+    color:#fff;
+}
+
+.exp-header{
+    text-align:center;
+    max-width:900px;
+    margin:auto;
+}
+
+.exp-header h2{
+    font-size:2.6rem;
+    margin-bottom:15px;
+    font-weight:700;
+}
+
+.exp-header p{
+    color:#94a3b8;
+    font-size:1.1rem;
+    line-height:1.6;
+}
+
+.metrics{
+    margin-top:50px;
+    display:grid;
+    grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+    gap:20px;
+}
+
+.metric{
+    background:linear-gradient(145deg,#020617,#0f172a);
+    padding:30px;
+    border-radius:16px;
+    text-align:center;
+    transition:0.3s;
+    box-shadow:0 10px 30px rgba(0,0,0,0.4);
+}
+
+.metric:hover{
+    transform:translateY(-6px);
+}
+
+.metric h3{
+    font-size:2.3rem;
+    color:#38bdf8;
+}
+
+.metric span{
+    font-size:0.95rem;
+    color:#94a3b8;
+}
+
+/* CARRUSEL */
+.carousel-container{
+    margin-top:80px;
+    position:relative;
+}
+
+.carousel{
+    display:flex;
+    overflow:hidden;
+    scroll-behavior:smooth;
+}
+
+.carousel-track{
+    display:flex;
+    gap:20px;
+}
+
+.slide{
+    min-width:430px;
+    height:320px;
+    border-radius:16px;
+    overflow:hidden;
+    position:relative;
+    flex-shrink:0;
+    box-shadow:0 10px 25px rgba(0,0,0,0.5);
+}
+
+.slide img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    transition:0.5s;
+}
+
+.slide:hover img{
+    transform:scale(1.1);
+}
+
+.slide::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+}
+
+.slide-text{
+    position:absolute;
+    bottom:15px;
+    left:15px;
+    font-size:0.9rem;
+    color:#fff;
+}
+
+.carousel-btn{
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%);
+    background:rgba(15,23,42,0.9);
+    border:none;
+    color:#fff;
+    width:45px;
+    height:45px;
+    border-radius:50%;
+    cursor:pointer;
+}
+
+.prev{ left:-20px; }
+.next{ right:-20px; }
+
+/* ================= CONTACTO ================= */
+.contacto {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.contacto h2 {
+    font-family: Georgia, serif;
+    margin-bottom: 20px;
+}
+
+.contacto p {
+    margin: 8px 0;
+}
+
+/* ================= FOOTER ================= */
+footer {
+    background: #0d1b2a;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* ================= ANIMACIÓN ================= */
+@keyframes fadeUp {
+    from { opacity:0; transform:translateY(30px); }
+    to { opacity:1; transform:translateY(0); }
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+
+    .hero-content h2 {
+        font-size: 28px;
+        white-space: normal;
+    }
+
+    .page-hero-content h1 {
+        font-size: 28px;
+    }
+
+    .card {
+        width: 100%;
+        max-width: 320px;
+    }
+
+    .slide{
+        min-width:250px;
+        height:180px;
+    }
+
+    .exp-header h2{
+        font-size:2rem;
+    }
+}
+/* CENTRAR TEXTO EN TARJETAS DE PÁGINAS INTERNAS */
+.page-box {
+    background: #fff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    transition: 0.3s;
+
+    text-align: center; /* 👈 CENTRA TODO */
+}
+
+.page-box h3 {
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.page-box p {
+    text-align: center;
+}
+
+/* ================= CONTACTO PRO ================= */
+.contacto-pro {
+    padding: 80px 20px;
+    background: #020617;
+    color: white;
+    text-align: center;
+}
+
+.contacto-pro h2 {
+    font-size: 32px;
+    margin-bottom: 10px;
+    font-family: Georgia, serif;
+}
+
+.contacto-sub {
+    color: #94a3b8;
+    margin-bottom: 50px;
+}
+
+/* GRID */
+.contacto-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    gap: 25px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+/* CARDS */
+.contacto-card {
+    background: linear-gradient(145deg,#020617,#0f172a);
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+    transition: 0.3s;
+}
+
+.contacto-card:hover {
+    transform: translateY(-6px);
+}
+
+.contacto-card h3 {
+    margin: 15px 0 10px;
+}
+
+.contacto-card p {
+    color: #cbd5f5;
+    font-size: 14px;
+}
+
+/* ICONOS */
+.icono {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 10px;
+}
+
+/* WHATSAPP */
+.whatsapp-box {
+    margin-top: 50px;
+}
+
+.btn-whatsapp {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 28px;
+    background: #25D366;
+    color: white;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.3s;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+.btn-whatsapp:hover {
+    transform: scale(1.05);
+    background: #1ebe5d;
+}
+
+.icono-wsp {
+    width: 22px;
+}
+.icono {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 10px;
+    opacity: 0.9;
+}

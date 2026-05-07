@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Casa Paternina</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+
+/* ================= EXPERIENCIA ================= */
+.experiencia{
+    padding:80px 5%;
+    background:#020617;
+}
+
+/* ===== BLOQUE 1 ===== */
+.exp-header{
+    text-align:center;
+    max-width:900px;
+    margin:auto;
+}
+
+.exp-header h2{
+    font-size:2.5rem;
+    margin-bottom:15px;
+    font-weight:700;
+}
+
+.exp-header p{
+    color:#94a3b8;
+    font-size:1.1rem;
+    line-height:1.6;
+}
+
+/* METRICAS */
+.metrics{
+    margin-top:50px;
+    display:grid;
+    grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+    gap:20px;
+}
+
+.metric{
+    background:linear-gradient(145deg,#020617,#0f172a);
+    padding:30px;
+    border-radius:16px;
+    text-align:center;
+    transition:0.3s;
+    box-shadow:0 10px 30px rgba(0,0,0,0.4);
+}
+
+.metric:hover{
+    transform:translateY(-5px);
+}
+
+.metric h3{
+    font-size:2.2rem;
+    color:#38bdf8;
+}
+
+.metric span{
+    font-size:0.95rem;
+    color:#94a3b8;
+}
+
+/* ===== BLOQUE 2 CARRUSEL ===== */
+.carousel-container{
+    margin-top:80px;
+    position:relative;
+}
+
+.carousel{
+    display:flex;
+    overflow:hidden;
+    scroll-behavior:smooth;
+}
+
+.carousel-track{
+    display:flex;
+    gap:20px;
+}
+
+.slide{
+    min-width:300px;
+    height:220px;
+    border-radius:16px;
+    overflow:hidden;
+    position:relative;
+    flex-shrink:0;
+    box-shadow:0 10px 25px rgba(0,0,0,0.5);
+    transition:0.3s;
+}
+
+.slide img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    transition:0.5s;
+}
+
+.slide:hover img{
+    transform:scale(1.1);
+}
+
+.slide::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+}
+
+.slide-text{
+    position:absolute;
+    bottom:15px;
+    left:15px;
+    font-size:0.9rem;
+    color:#fff;
+    z-index:2;
+}
+
+/* BOTONES */
+.carousel-btn{
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%);
+    background:rgba(15,23,42,0.9);
+    border:none;
+    color:#fff;
+    width:45px;
+    height:45px;
+    border-radius:50%;
+    cursor:pointer;
+    font-size:20px;
+    z-index:10;
+    transition:0.3s;
+}
+
+.carousel-btn:hover{
+    background:#38bdf8;
+    color:#000;
+}
+
+.prev{
+    left:-20px;
+}
+
+.next{
+    right:-20px;
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+    .slide{
+        min-width:250px;
+        height:180px;
+    }
+
+    .exp-header h2{
+        font-size:2rem;
+    }
+}
+
+    </style>
+
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="header">
+    <img src="img/logo2.png" alt="Logo Casa Paternina" class="logo-header">
+</header>
+
+<!-- HERO -->
+<section class="hero">
+    <div class="hero-content">
+        <h2>Soluciones industriales de alto nivel</h2>
+        <p>Experiencia real en sistemas de transporte por cable y mantenimiento especializado</p>
+        <a href="https://wa.me/573203703056" class="btn">Contáctanos</a>
+    </div>
+</section>
+
+<!-- ================= SERVICIOS ================= -->
+<section class="servicios">
+    <h2>SOLUCIONES QUE OFRECEMOS</h2>
+
+    <div class="grid">
+
+        <a href="mantenimiento.html">
+            <div class="card">Mantenimiento integral</div>
+        </a>
+
+        <a href="transporte.html">
+            <div class="card">Transporte por cable</div>
+        </a>
+
+        <a href="adecuaciones.html">
+            <div class="card">Adecuaciones locativas</div>
+        </a>
+
+        <a href="suministro.html">
+            <div class="card">Suministro técnico</div>
+        </a>
+
+        <a href="ingenieria.html">
+            <div class="card">Diseño e ingeniería</div>
+        </a>
+
+        <a href="energia.html">
+            <div class="card">Energía solar</div>
+        </a>
+
+    </div>
+</section>
+
+<!-- ================= EXPERIENCIA ================= -->
+<section class="experiencia">
+
+    <div class="exp-header">
+        <h2>Nuestra experiencia en campo</h2>
+        <p>
+            Participamos en proyectos con entidades del sector transporte, garantizando operación segura,
+            mantenimiento continuo y cumplimiento técnico.
+        </p>
+
+        <div class="metrics">
+            <div class="metric">
+                <h3>+15</h3>
+                <span>Proyectos ejecutados</span>
+            </div>
+            <div class="metric">
+                <h3>+10</h3>
+                <span>Años de experiencia</span>
+            </div>
+            <div class="metric">
+                <h3>+20</h3>
+                <span>Contratos industriales</span>
+            </div>
+            <div class="metric">
+                <h3>100%</h3>
+                <span>Cumplimiento técnico</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="carousel-container">
+
+        <button class="carousel-btn prev">&#10094;</button>
+        <button class="carousel-btn next">&#10095;</button>
+
+        <div class="carousel" id="carousel">
+            <div class="carousel-track">
+
+                <div class="slide">
+                    <img src="img/proyecto1.jpeg">
+                    <div class="slide-text">Mantenimiento especializado</div>
+                </div>
+
+                <div class="slide">
+                    <img src="img/proyecto2.jpeg">
+                    <div class="slide-text">Sistema de cable aéreo</div>
+                </div>
+
+                <div class="slide">
+                    <img src="img/proyecto3.jpeg">
+                    <div class="slide-text">Operación técnica</div>
+                </div>
+
+                <div class="slide">
+                    <img src="img/proyecto4.jpeg">
+                    <div class="slide-text">Infraestructura industrial</div>
+                </div>
+
+                <div class="slide">
+                    <img src="img/proyecto5.jpeg">
+                    <div class="slide-text">Mantenimiento correctivo</div>
+                </div>
+
+                <div class="slide">
+                    <img src="img/proyecto6.jpeg">
+                    <div class="slide-text">Inspección técnica</div>
+                </div>
+
+                <div class="slide">
+                    <img src="img/proyecto7.jpeg">
+                    <div class="slide-text">Optimización operativa</div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================= CONTACTO PRO ================= -->
+<section class="contacto-pro">
+
+    <h2>Contáctanos</h2>
+    <p class="contacto-sub">Estamos listos para ayudarte en tu próximo proyecto</p>
+
+    <div class="contacto-grid">
+
+        <div class="contacto-card">
+            <h3>Teléfonos</h3>
+            <p>(+57) 320 370 3056</p>
+            <p>(+57) 310 546 9870</p>
+        </div>
+
+        <div class="contacto-card">
+            
+            <h3>Correo</h3>
+            <p>casapaternina.sas@gmail.com</p>
+        </div>
+
+        <div class="contacto-card">
+            
+            <h3>Ubicación</h3>
+            <p>Carrera 54 # 16 - 31</p>
+            <p>Guayabal San Pablo</p>
+            <p>Medellín - Colombia</p>
+        </div>
+
+    </div>
+
+    <!-- BOTÓN WHATSAPP -->
+    <div class="whatsapp-box">
+        <a href="https://wa.me/573203703056" target="_blank" class="btn-whatsapp">
+            <img src="img/whatsapp.png" class="icono-wsp">
+            Escríbenos por WhatsApp
+        </a>
+    </div>
+
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <p>© 2026 Casa Paternina S.A.S</p>
+    <p>Medellín - Colombia</p>
+</footer>
+
+<script>
+const carousel = document.getElementById('carousel');
+const nextBtn = document.querySelector('.next');
+const prevBtn = document.querySelector('.prev');
+
+const scrollAmount = 320;
+
+nextBtn.addEventListener('click', ()=>{
+    carousel.scrollLeft += scrollAmount;
+});
+
+prevBtn.addEventListener('click', ()=>{
+    carousel.scrollLeft -= scrollAmount;
+});
+</script>
+
+</body>
+</html>
