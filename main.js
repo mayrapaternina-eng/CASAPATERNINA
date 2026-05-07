@@ -86,18 +86,27 @@
 
   function initCarousel() {
     const carousel = document.getElementById("carousel");
-    const nextBtn = document.querySelector(".next");
-    const prevBtn = document.querySelector(".prev");
+    const wrap = carousel?.closest(".carousel-container");
+    const nextBtn = wrap?.querySelector(".carousel-btn.next");
+    const prevBtn = wrap?.querySelector(".carousel-btn.prev");
 
     if (!carousel || !nextBtn || !prevBtn) return;
 
-    const scrollAmount = 320;
+    function scrollStep() {
+      const slide = carousel.querySelector(".slide");
+      const track = carousel.querySelector(".carousel-track");
+      if (!slide || !track) return Math.min(320, carousel.clientWidth * 0.92);
+      const gapRaw = getComputedStyle(track).gap || getComputedStyle(track).columnGap || "0";
+      const gap = Number.parseFloat(gapRaw) || 0;
+      return slide.getBoundingClientRect().width + gap;
+    }
+
     nextBtn.addEventListener("click", () => {
-      carousel.scrollLeft += scrollAmount;
+      carousel.scrollBy({ left: scrollStep(), behavior: prefersReducedMotion ? "auto" : "smooth" });
     });
 
     prevBtn.addEventListener("click", () => {
-      carousel.scrollLeft -= scrollAmount;
+      carousel.scrollBy({ left: -scrollStep(), behavior: prefersReducedMotion ? "auto" : "smooth" });
     });
   }
 
