@@ -346,7 +346,7 @@ h1,h2,h3{
 }
 
 .page-hero-content h1 {
-    font-size: 42px;
+    font-size: clamp(26px, 6vw, 42px);
     font-family: "Playfair Display", Georgia, serif;
     margin-bottom: 10px;
 }
@@ -358,7 +358,7 @@ h1,h2,h3{
 
 /* CONTENIDO */
 .page-content {
-    padding: 70px 8%;
+    padding: clamp(40px, 8vw, 70px) clamp(16px, 8%, 96px);
     max-width: 1200px;
     margin: auto;
 }
@@ -560,6 +560,12 @@ h1,h2,h3{
 }
 
 /* CARRUSEL — centrado en móvil, sin scroll horizontal en la página */
+
+/* Variable de padding para calcular el ancho del slide de forma fiable */
+:root {
+    --carousel-pad: clamp(48px, 12vw, 64px);
+}
+
 .carousel-container{
     margin-top: clamp(48px, 8vw, 80px);
     position: relative;
@@ -567,7 +573,7 @@ h1,h2,h3{
     max-width: min(1200px, 100%);
     margin-left: auto;
     margin-right: auto;
-    padding-inline: clamp(48px, 12vw, 64px);
+    padding-inline: var(--carousel-pad);
     box-sizing: border-box;
     overflow: hidden;
 }
@@ -600,9 +606,9 @@ h1,h2,h3{
 }
 
 .slide{
-    flex: 0 0 min(430px, 100%);
+    flex: 0 0 min(430px, calc(100vw - 2 * var(--carousel-pad)));
     scroll-snap-align: center;
-    width: min(430px, 100%);
+    width: min(430px, calc(100vw - 2 * var(--carousel-pad)));
     max-width: 100%;
     height: clamp(180px, 42vw, 320px);
     border-radius: 16px;
@@ -677,8 +683,11 @@ h1,h2,h3{
 }
 
 @media (max-width: 768px) {
+    :root {
+        --carousel-pad: clamp(40px, 11vw, 52px);
+    }
+
     .carousel-container{
-        padding-inline: clamp(40px, 11vw, 52px);
         max-width: 100%;
     }
 
@@ -740,9 +749,7 @@ footer {
         padding: clamp(28px, 6vw, 46px) clamp(18px, 5vw, 34px);
     }
 
-    .page-hero-content h1 {
-        font-size: 28px;
-    }
+    /* page-hero-content h1 ya usa clamp(), no se necesita override aquí */
 
     /* Cards de servicios: ancho completo de la cuadrícula (sin max-width fijo) */
     .servicios .grid > a .card {
