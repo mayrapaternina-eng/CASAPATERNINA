@@ -52,12 +52,60 @@ h1,h2,h3{
     background: var(--brandbar);
     border-bottom: 1px solid var(--line);
     padding: 16px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+.header > a {
+    display: block;
+    text-decoration: none;
 }
 
 .logo-header {
     max-width: min(520px, 85vw);
     display: block;
     margin: 0 auto;
+}
+
+/* ================= NAV ================= */
+.nav-list {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 4px 6px;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-list a {
+    display: block;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 12px;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: rgba(229, 231, 235, 0.75);
+    padding: 7px 12px;
+    border-radius: 10px;
+    border: 1px solid transparent;
+    transition: color 0.2s, border-color 0.2s, background 0.2s;
+}
+
+.nav-list a:hover,
+.nav-list a[aria-current="page"] {
+    color: rgba(251, 191, 36, 0.95);
+    border-color: rgba(251, 191, 36, 0.22);
+    background: rgba(251, 191, 36, 0.07);
+}
+
+@media (max-width: 520px) {
+    .nav-list a {
+        font-size: 11px;
+        padding: 6px 9px;
+    }
 }
 
 /* Header layout w/ navigation */
