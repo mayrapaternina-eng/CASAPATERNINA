@@ -28,7 +28,7 @@ html {
 
 /* ================= BODY ================= */
 body {
-    font-family: "Inter", system-ui, -apple-system, Segoe UI, Arial, sans-serif;
+    font-family: "IBM Plex Sans", system-ui, -apple-system, Arial, sans-serif;
     background: radial-gradient(1200px 650px at 20% -10%, rgba(56, 189, 248, 0.10), transparent 55%),
                 radial-gradient(900px 520px at 80% 10%, rgba(251, 191, 36, 0.10), transparent 55%),
                 var(--bg);
@@ -42,8 +42,9 @@ a{ color: inherit; }
 
 /* Headings */
 h1,h2,h3{
-    font-family: "Barlow Semi Condensed", system-ui, sans-serif;
-    letter-spacing: -0.01em;
+    font-family: "IBM Plex Sans", system-ui, sans-serif;
+    font-weight: 600;
+    letter-spacing: -0.02em;
 }
 
 /* ================= HEADER ================= */
@@ -83,9 +84,9 @@ h1,h2,h3{
 .nav-list a {
     display: block;
     text-decoration: none;
-    font-weight: 700;
-    font-size: 12px;
-    letter-spacing: 0.03em;
+    font-weight: 500;
+    font-size: 11.5px;
+    letter-spacing: 0.08em;
     text-transform: uppercase;
     color: rgba(229, 231, 235, 0.75);
     padding: 7px 12px;
@@ -139,9 +140,9 @@ h1,h2,h3{
 
 .nav a{
     text-decoration: none;
-    font-weight: 800;
-    font-size: 13px;
-    letter-spacing: 0.02em;
+    font-weight: 500;
+    font-size: 12.5px;
+    letter-spacing: 0.07em;
     color: rgba(229, 231, 235, 0.82);
     padding: 10px 10px;
     border-radius: 12px;
@@ -159,8 +160,10 @@ h1,h2,h3{
     text-decoration: none;
     padding: 10px 14px;
     border-radius: 12px;
-    font-weight: 900;
-    font-size: 13px;
+    font-weight: 600;
+    font-size: 12.5px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
     color: #0b1220;
     background: linear-gradient(135deg, rgba(251, 191, 36, 0.95), rgba(251, 191, 36, 0.75));
     border: 1px solid rgba(251, 191, 36, 0.35);
@@ -207,16 +210,20 @@ h1,h2,h3{
 }
 
 .hero-content h2 {
-    font-size: clamp(34px, 5vw, 54px);
-    margin-bottom: 14px;
-    line-height: 1.05;
+    font-size: clamp(32px, 4.8vw, 52px);
+    font-weight: 600;
+    letter-spacing: -0.028em;
+    margin-bottom: 16px;
+    line-height: 1.08;
 }
 
 .hero-content p {
-    font-size: 18px;
-    margin: 0 auto 26px;
-    line-height: 1.6;
-    color: rgba(229, 231, 235, 0.88);
+    font-size: 17px;
+    font-weight: 300;
+    margin: 0 auto 28px;
+    line-height: 1.72;
+    letter-spacing: 0.01em;
+    color: rgba(229, 231, 235, 0.82);
     max-width: 60ch;
 }
 
@@ -228,8 +235,9 @@ h1,h2,h3{
     color: #0b1220;
     text-decoration: none;
     border-radius: 12px;
-    font-weight: 800;
-    letter-spacing: 0.01em;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
     transition: all 0.3s ease;
     box-shadow: 0 16px 35px rgba(0,0,0,0.35);
     border: 1px solid rgba(251, 191, 36, 0.35);
@@ -250,10 +258,13 @@ h1,h2,h3{
 }
 
 .servicios h2 {
-    font-family: "Barlow Semi Condensed", system-ui, sans-serif;
-    font-size: clamp(1.35rem, 4.5vw, 2rem);
+    font-family: "IBM Plex Sans", system-ui, sans-serif;
+    font-size: clamp(1.1rem, 3vw, 1.45rem);
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
     margin-bottom: clamp(28px, 5vw, 40px);
-    color: var(--text);
+    color: rgba(229, 231, 235, 0.60);
     padding-inline: 8px;
 }
 
@@ -337,11 +348,11 @@ h1,h2,h3{
 }
 
 .card h3{
-    font-family: "Barlow Semi Condensed", system-ui, sans-serif;
-    font-size: clamp(1rem, 3.5vw, 1.25rem);
-    font-weight: 800;
+    font-family: "IBM Plex Sans", system-ui, sans-serif;
+    font-size: clamp(0.95rem, 3vw, 1.15rem);
+    font-weight: 600;
     letter-spacing: -0.01em;
-    line-height: 1.15;
+    line-height: 1.2;
     word-wrap: break-word;
     overflow-wrap: break-word;
     hyphens: auto;
@@ -394,14 +405,20 @@ h1,h2,h3{
 }
 
 .page-hero-content h1 {
-    font-size: clamp(26px, 6vw, 42px);
-    font-family: "Barlow Semi Condensed", system-ui, sans-serif;
-    margin-bottom: 10px;
+    font-size: clamp(26px, 5.5vw, 44px);
+    font-family: "IBM Plex Sans", system-ui, sans-serif;
+    font-weight: 600;
+    letter-spacing: -0.025em;
+    line-height: 1.08;
+    margin-bottom: 12px;
 }
 
 .page-hero-content p {
-    font-size: 18px;
-    opacity: 0.9;
+    font-size: 16.5px;
+    font-weight: 300;
+    letter-spacing: 0.01em;
+    line-height: 1.7;
+    opacity: 0.82;
 }
 
 /* CONTENIDO */
@@ -412,15 +429,20 @@ h1,h2,h3{
 }
 
 .page-content h2 {
-    font-family: "Barlow Semi Condensed", system-ui, sans-serif;
-    margin-bottom: 20px;
+    font-family: "IBM Plex Sans", system-ui, sans-serif;
+    font-size: clamp(1.4rem, 3.2vw, 2rem);
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    line-height: 1.15;
+    margin-bottom: 22px;
     color: var(--text);
 }
 
 .page-content p {
-    line-height: 1.7;
-    margin-bottom: 20px;
-    color: rgba(229, 231, 235, 0.86);
+    font-weight: 400;
+    line-height: 1.75;
+    margin-bottom: 22px;
+    color: rgba(229, 231, 235, 0.82);
 }
 
 /* BLOQUES */
@@ -472,14 +494,17 @@ h1,h2,h3{
 }
 
 .page-box h3{
-    font-size: 1.25rem;
-    font-weight: 800;
+    font-size: 1.1rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    line-height: 1.2;
     margin-bottom: 10px;
 }
 
 .page-box p{
-    color: rgba(229, 231, 235, 0.78);
-    line-height: 1.7;
+    font-weight: 400;
+    color: rgba(229, 231, 235, 0.75);
+    line-height: 1.72;
 }
 
 .page-box-feature{
@@ -525,15 +550,19 @@ h1,h2,h3{
 }
 
 .exp-header h2{
-    font-size: clamp(30px, 4.2vw, 44px);
-    margin-bottom: 12px;
-    font-weight: 800;
+    font-size: clamp(26px, 3.8vw, 40px);
+    font-weight: 600;
+    letter-spacing: -0.022em;
+    line-height: 1.1;
+    margin-bottom: 14px;
 }
 
 .exp-header p{
-    color: rgba(229, 231, 235, 0.76);
-    font-size: 1.05rem;
-    line-height: 1.7;
+    color: rgba(229, 231, 235, 0.70);
+    font-size: 1rem;
+    font-weight: 300;
+    line-height: 1.75;
+    letter-spacing: 0.005em;
     max-width: 70ch;
     margin: 0 auto;
 }
@@ -575,22 +604,23 @@ h1,h2,h3{
 }
 
 .metric-number{
-    font-family: "Barlow Semi Condensed", system-ui, sans-serif;
-    font-weight: 800;
-    font-size: clamp(36px, 4.2vw, 52px);
+    font-family: "IBM Plex Sans Condensed", system-ui, sans-serif;
+    font-weight: 700;
+    font-size: clamp(38px, 4.5vw, 56px);
     line-height: 1;
     margin-top: 10px;
     margin-bottom: 10px;
-    letter-spacing: -0.02em;
+    letter-spacing: -0.03em;
     color: rgba(251, 191, 36, 0.96);
     text-shadow: 0 18px 45px rgba(0,0,0,0.45);
 }
 
 .metric span{
-    font-size: 0.95rem;
-    color: rgba(229, 231, 235, 0.72);
-    font-weight: 700;
-    letter-spacing: 0.01em;
+    font-size: 0.82rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: rgba(229, 231, 235, 0.58);
     display: block;
 }
 
@@ -751,7 +781,9 @@ h1,h2,h3{
 }
 
 .contacto h2 {
-    font-family: "Barlow Semi Condensed", system-ui, sans-serif;
+    font-family: "IBM Plex Sans", system-ui, sans-serif;
+    font-weight: 600;
+    letter-spacing: -0.02em;
     margin-bottom: 20px;
 }
 
@@ -790,7 +822,8 @@ footer {
     }
 
     .hero-content h2 {
-        font-size: 30px;
+        font-size: clamp(26px, 7vw, 36px);
+        letter-spacing: -0.022em;
     }
 
     .hero-content{
@@ -806,7 +839,8 @@ footer {
     }
 
     .exp-header h2{
-        font-size:2rem;
+        font-size: clamp(22px, 6vw, 32px);
+        letter-spacing: -0.018em;
     }
 }
 /* CENTRAR TEXTO EN TARJETAS DE PÁGINAS INTERNAS */
@@ -834,13 +868,18 @@ footer {
 }
 
 .contacto-pro h2 {
-    font-size: 32px;
+    font-family: "IBM Plex Sans", system-ui, sans-serif;
+    font-size: clamp(24px, 3.5vw, 36px);
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    line-height: 1.12;
     margin-bottom: 10px;
-    font-family: "Barlow Semi Condensed", system-ui, sans-serif;
 }
 
 .contacto-sub {
     color: #94a3b8;
+    font-weight: 300;
+    letter-spacing: 0.01em;
     margin-bottom: 50px;
 }
 
@@ -868,12 +907,16 @@ footer {
 }
 
 .contacto-card h3 {
+    font-weight: 600;
+    letter-spacing: -0.01em;
     margin: 15px 0 10px;
 }
 
 .contacto-card p {
-    color: #cbd5f5;
+    color: #a8b4cc;
     font-size: 14px;
+    font-weight: 400;
+    line-height: 1.65;
 }
 
 /* ICONOS */
@@ -897,7 +940,9 @@ footer {
     color: white;
     border-radius: 50px;
     text-decoration: none;
-    font-weight: 800;
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: 0.03em;
     transition: 0.3s;
     box-shadow: 0 10px 25px rgba(0,0,0,0.3);
 }
