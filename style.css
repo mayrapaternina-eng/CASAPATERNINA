@@ -28,7 +28,7 @@ html {
 
 /* ================= BODY ================= */
 body {
-    font-family: "Manrope", system-ui, -apple-system, Segoe UI, Arial, sans-serif;
+    font-family: "Inter", system-ui, -apple-system, Segoe UI, Arial, sans-serif;
     background: radial-gradient(1200px 650px at 20% -10%, rgba(56, 189, 248, 0.10), transparent 55%),
                 radial-gradient(900px 520px at 80% 10%, rgba(251, 191, 36, 0.10), transparent 55%),
                 var(--bg);
@@ -42,8 +42,8 @@ a{ color: inherit; }
 
 /* Headings */
 h1,h2,h3{
-    font-family: "Playfair Display", Georgia, serif;
-    letter-spacing: -0.02em;
+    font-family: "Barlow Semi Condensed", system-ui, sans-serif;
+    letter-spacing: -0.01em;
 }
 
 /* ================= HEADER ================= */
@@ -250,7 +250,7 @@ h1,h2,h3{
 }
 
 .servicios h2 {
-    font-family: "Playfair Display", Georgia, serif;
+    font-family: "Barlow Semi Condensed", system-ui, sans-serif;
     font-size: clamp(1.35rem, 4.5vw, 2rem);
     margin-bottom: clamp(28px, 5vw, 40px);
     color: var(--text);
@@ -337,7 +337,7 @@ h1,h2,h3{
 }
 
 .card h3{
-    font-family: "Playfair Display", Georgia, serif;
+    font-family: "Barlow Semi Condensed", system-ui, sans-serif;
     font-size: clamp(1rem, 3.5vw, 1.25rem);
     font-weight: 800;
     letter-spacing: -0.01em;
@@ -395,7 +395,7 @@ h1,h2,h3{
 
 .page-hero-content h1 {
     font-size: clamp(26px, 6vw, 42px);
-    font-family: "Playfair Display", Georgia, serif;
+    font-family: "Barlow Semi Condensed", system-ui, sans-serif;
     margin-bottom: 10px;
 }
 
@@ -412,7 +412,7 @@ h1,h2,h3{
 }
 
 .page-content h2 {
-    font-family: "Playfair Display", Georgia, serif;
+    font-family: "Barlow Semi Condensed", system-ui, sans-serif;
     margin-bottom: 20px;
     color: var(--text);
 }
@@ -575,7 +575,7 @@ h1,h2,h3{
 }
 
 .metric-number{
-    font-family: "Playfair Display", Georgia, serif;
+    font-family: "Barlow Semi Condensed", system-ui, sans-serif;
     font-weight: 800;
     font-size: clamp(36px, 4.2vw, 52px);
     line-height: 1;
@@ -751,7 +751,7 @@ h1,h2,h3{
 }
 
 .contacto h2 {
-    font-family: Georgia, serif;
+    font-family: "Barlow Semi Condensed", system-ui, sans-serif;
     margin-bottom: 20px;
 }
 
@@ -836,7 +836,7 @@ footer {
 .contacto-pro h2 {
     font-size: 32px;
     margin-bottom: 10px;
-    font-family: "Playfair Display", Georgia, serif;
+    font-family: "Barlow Semi Condensed", system-ui, sans-serif;
 }
 
 .contacto-sub {
