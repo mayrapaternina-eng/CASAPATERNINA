@@ -40,6 +40,18 @@ body {
 /* Links */
 a{ color: inherit; }
 
+/* Contact links (tel/mailto) in cards and footer */
+.contacto-card a,
+.contacto-card a:visited,
+footer address a {
+    color: inherit;
+    text-decoration: none;
+}
+.contacto-card a:hover {
+    color: var(--accent);
+    text-decoration: underline;
+}
+
 /* Headings */
 h1,h2,h3{
     font-family: "IBM Plex Sans", system-ui, sans-serif;
@@ -522,9 +534,13 @@ h1,h2,h3{
 /* IMAGEN DESTACADA */
 .page-img {
     width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
     border-radius: 18px;
     margin-top: 30px;
     box-shadow: var(--shadow);
+    display: block;
 }
 
 /* ================= EXPERIENCIA ================= */

@@ -1,4 +1,6 @@
 User-agent: *
 Allow: /
+Disallow: /.claude/
+Disallow: /pruebadegit.html
 
 Sitemap: https://www.casapaternina.com/sitemap.xml
